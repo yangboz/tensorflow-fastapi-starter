@@ -6,7 +6,8 @@ from PIL import Image
 from tensorflow.keras.applications.imagenet_utils import decode_predictions
 
 model = None
-
+#@see:https://keras.io/api/applications/
+modelNames = ['xception','vgg16','vgg19','ResNet50','ResNet101','ResNet152','ResNet50v2','ResNet101v2','ResNet152v2'，'InceptionV3'，'InceptionResNetv2','MobileNet','MobileNetV2','DenseNet121','DenseNet169'，'DenseNet201','NASNetMobile','NASNetLarge','EfficientNetB0']
 
 def load_model():
     model = tf.keras.applications.MobileNetV2(weights="imagenet")
